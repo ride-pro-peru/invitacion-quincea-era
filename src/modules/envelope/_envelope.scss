@@ -3,30 +3,25 @@
 
 .envelope {
     position: relative;
-    background-color: vars.$color-secondary-100;
     width: 100%;
     height: 100dvh;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.2rem;
-    padding: 2rem;
     box-sizing: border-box;
-    text-align: center;
+}
 
-    &--video {
-        padding: 0;
-        gap: 0;
-        background-color: #f6f5f3;
-    }
+.envelope-video {
+    background-color: #f6f5f3;
+    cursor: pointer;
 
     &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
+        z-index: 1;
 
         &::-webkit-media-controls {
             display: none !important;
@@ -42,6 +37,32 @@
             -webkit-appearance: none;
         }
     }
+
+    &__indicator-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        border: 2px solid rgba(194, 159, 83, 0.4);
+        background-color: rgba(194, 159, 83, 0.05);
+        z-index: 2;
+        pointer-events: none;
+        animation: pulseVideoSealRing 2s infinite ease-in-out;
+    }
+}
+
+.envelope-open-closed {
+    background-color: vars.$color-secondary-100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+    padding: 2rem;
+    text-align: center;
 
     &__card {
         display: flex;
@@ -177,29 +198,29 @@
     &__closed-img,
     &__open-img {
         width: 88vw;
-        max-width: 34rem;
+        max-width: 30rem;
         height: auto;
         display: block;
         filter: drop-shadow(0 14px 32px rgba(vars.$color-primary-900, 0.18));
 
         @include mix.respondToMin('sm') {
-            width: 80vw;
-            max-width: 44rem;
+            width: 50vw;
+            max-width: 30rem;
         }
 
         @include mix.respondToMin('md') {
-            width: 75vw;
-            max-width: 56rem;
+            width: 55vw;
+            max-width: 35rem;
         }
 
         @include mix.respondToMin('lg') {
-            width: 70vw;
-            max-width: 68rem;
+            width: 60vw;
+            max-width: 40rem;
         }
 
         @include mix.respondToMin('xl') {
             width: 65vw;
-            max-width: 60rem;
+            max-width: 45rem;
         }
     }
 
@@ -219,54 +240,53 @@
         pointer-events: none;
 
         @include mix.respondToMin('sm') {
-            width: 20rem;
-            margin-left: -10rem;
+            width: 15rem;
+            margin-left: -5rem;
             top: 4rem;
             padding: 1rem 1rem 1.3rem;
         }
 
         @include mix.respondToMin('md') {
-            width: 26rem;
-            margin-left: -13rem;
+            width: 20rem;
+            margin-left: -10rem;
             top: 5rem;
             padding: 1.3rem 1.3rem 1.7rem;
         }
 
         @include mix.respondToMin('lg') {
-            width: 32rem;
-            margin-left: -16rem;
+            width: 25rem;
+            margin-left: -15rem;
             top: 6rem;
             padding: 1.6rem 1.6rem 2.1rem;
         }
 
         @include mix.respondToMin('xl') {
-            width: 38rem;
-            margin-left: -19rem;
-            top: 7rem;
+            width: 30rem;
+            top: 12rem;
             padding: 1.9rem 1.9rem 2.5rem;
         }
     }
 
     &__polaroid-img-wrapper {
         width: 100%;
-        height: 14rem;
+        height: 10rem;
         overflow: hidden;
         background-color: #f5f5f3;
 
         @include mix.respondToMin('sm') {
-            height: 18rem;
+            height: 12rem;
         }
 
         @include mix.respondToMin('md') {
-            height: 23rem;
+            height: 17rem;
         }
 
         @include mix.respondToMin('lg') {
-            height: 29rem;
+            height: 22rem;
         }
 
         @include mix.respondToMin('xl') {
-            height: 35rem;
+            height: 27rem;
         }
 
         img {

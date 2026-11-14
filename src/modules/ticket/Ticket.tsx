@@ -5,7 +5,6 @@ import { TicketFooter } from './components/TicketFooter'
 import { TicketTableSection } from './components/TicketTableSection'
 import { TicketNotice } from './components/TicketNotice'
 import { useTicket } from '@/common/hooks'
-import './_ticket.scss'
 
 import bg from '@/assets/images/backgrounds/bg-tickets.jpg'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { InfoIcon } from '@phosphor-icons/react'
 import { useModal, useInvitationConfig } from '@/common/hooks'
 import { MODAL_NAMES } from '@/store/ui/modal.slice'
-import { SearchForm } from './components/search-form/SearchForm'
+import { SearchForm } from './components/SearchForm'
 
 export const Search: React.FC = () => {
     const { onOpenModal } = useModal()

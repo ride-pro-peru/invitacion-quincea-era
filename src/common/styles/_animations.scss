@@ -253,6 +253,24 @@
     }
 }
 
+// Anillo pulsante de sello para sobre en video
+@keyframes pulseVideoSealRing {
+    0% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.8;
+    }
+}
+
 // Transición de destello (Flash) al abrir sobre
 @keyframes flashAnimation {
     0% {

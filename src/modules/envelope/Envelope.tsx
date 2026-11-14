@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useInvitationConfig } from '@/common/hooks'
-import { EnvelopeInteractive } from './EnvelopeInteractive'
-import { EnvelopeVideo } from './EnvelopeVideo'
 import type { EnvelopeConfig } from '@/common/types'
 
+import { EnvelopeOpenClosed } from './components/EnvelopeOpenClosed'
+import { EnvelopeVideo } from './components/EnvelopeVideo'
+
 export const Envelope: React.FC = () => {
+
     const { sections } = useInvitationConfig()
     const envelopConfig = (sections.envelop || sections.envelope) as EnvelopeConfig | undefined
     const envelopeType = envelopConfig?.type || 'cerrado-abierto'
@@ -31,14 +33,14 @@ export const Envelope: React.FC = () => {
 
     if (envelopeType === 'video-apertura') {
         if (isDesktop) {
-            return <EnvelopeInteractive />
+            return <EnvelopeOpenClosed />
         }
 
-        return (
-            <EnvelopeVideo />
-        )
+        return <EnvelopeVideo />
     }
 
-    return <EnvelopeInteractive />
+    if (envelopeType === 'cerrado-abierto') {
+        return <EnvelopeOpenClosed />
+    }
 }
 
