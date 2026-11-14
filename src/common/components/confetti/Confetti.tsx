@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useConfetti } from '@/common/hooks'
-import type { ConfettiOptions } from '@/common/hooks'
+import type { ConfettiOptions } from '@/common/hooks/useConfetti'
 
 export interface ConfettiProps extends ConfettiOptions {
     triggerOnMount?: boolean

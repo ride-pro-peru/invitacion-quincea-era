@@ -25,11 +25,11 @@
 @use '../../modules/invitation/countdown/countdown-section';
 @use '../../modules/invitation/family/family';
 @use '../../modules/invitation/places/places';
-@use '../../modules/invitation/graduates/graduates';
 @use '../../modules/invitation/dress-code/dress-code';
 @use '../../modules/invitation/itinerary/itinerary';
 @use '../../modules/invitation/details/details';
 @use '../../modules/invitation/presents/presents';
+@use '../../modules/invitation/guest-photos/guest-photos';
 @use '../../modules/invitation/gallery/gallery';
 @use '../../modules/invitation/confirmation/confirmation';
 @use '../../modules/invitation/rsvp/rsvp';
@@ -41,12 +41,3 @@
 // Invitation Search & Ticket
 @use '../../modules/search/search';
 @use '../../modules/ticket/ticket';
-
-// Scratch & VIP Addons Sections
-
-@use '../../modules/invitation/addons/lodging-weather/lodging-weather';
-@use '../../modules/invitation/addons/our-story/our-story';
-@use '../../modules/invitation/addons/faq-menu/faq-menu';
-@use '../../modules/invitation/addons/guest-photos/guest-photos';
-@use '../../modules/invitation/addons/monogram/monogram';
-@use '../../modules/invitation/addons/scratch-card/scratch-card';

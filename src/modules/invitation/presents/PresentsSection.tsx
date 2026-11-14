@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { GiftIcon, BankIcon, EnvelopeOpenIcon, CopyIcon, CheckIcon, ArrowSquareOutIcon } from '@phosphor-icons/react'
 import { useInvitationConfig, useToast } from '@/common/hooks'
 import { SectionHeader } from '@/common/components/section-header/SectionHeader'
 import { Button } from '@/common/components/button/Button'
 import { Accordion } from '@/common/components/accordion/Accordion'
 import type { AccordionItem } from '@/common/types'
-import { GiftIcon, BankIcon, EnvelopeOpenIcon, CopyIcon, CheckIcon, ArrowSquareOutIcon } from '@phosphor-icons/react'
+
 import florPresents from '@/assets/images/icons/flor-presents.svg'
 import florCentral from '@/assets/images/icons/flor-central.svg'
-
 import illustrationBottom from '@/assets/images/icons/flores-presents-inferior.svg'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]

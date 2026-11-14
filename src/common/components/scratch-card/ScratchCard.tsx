@@ -1,6 +1,6 @@
 import React from 'react'
 import { useScratchCard } from '@/common/hooks'
-import type { UseScratchCardOptions } from '@/common/hooks'
+import type { UseScratchCardOptions } from '@/common/hooks/useScratchCard'
 
 export interface ScratchCardProps extends UseScratchCardOptions {
     children: React.ReactNode
