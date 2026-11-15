@@ -26,36 +26,17 @@ const formatTitleFromKey = (key: string) => {
 }
 
 export const useMenu = (props?: MenuProps) => {
-    const dispatch = useDispatch()
-    const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen)
     const { theme, ui, config, sections } = useInvitationConfig()
-    const location = useLocation()
+
+    const dispatch = useDispatch()
+    const { pathname } = useLocation()
+    const isMenuOpen = useSelector((state: RootState) => state.menu.isOpen)
+    const [hasPassedMessage, setHasPassedMessage] = useState(false)
+
     const menuConfig = ui?.menu || theme?.menu
+    const isMenuRoute = pathname === '/invitation' || pathname === '/'
 
-    const [hasScrolledPast100vh, setHasScrolledPast100vh] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setHasScrolledPast100vh(window.scrollY >= window.innerHeight)
-        }
-
-        handleScroll()
-        window.addEventListener('scroll', handleScroll, { passive: true })
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-
-    const onOpenMenu = () => dispatch(openMenu())
-    const onCloseMenu = () => dispatch(closeMenu())
-    const onToggleMenu = () => {
-        if (isMenuOpen) {
-            dispatch(closeMenu())
-        } else {
-            dispatch(openMenu())
-        }
-    }
-
-    const isHiddenRoute = location.pathname === '/envelope' || location.pathname === '/search'
-    const isMenuVisible = (props?.show ?? menuConfig?.show ?? config?.hasMenu ?? true) && !isHiddenRoute && hasScrolledPast100vh
+    const isMenuVisible = isMenuRoute && hasPassedMessage && (props?.show ?? menuConfig?.showMenu ?? menuConfig?.show ?? config?.hasMenu ?? true)
     const activeVariant: MenuVariant = props?.variant || menuConfig?.variant || 'floating'
     const activeTitle = props?.title || menuConfig?.title || 'Menú'
     const activeBtnVariant: ButtonVariant = props?.buttonVariant || menuConfig?.buttonVariant || theme.buttonVariant || 'icon'
@@ -93,6 +74,41 @@ export const useMenu = (props?: MenuProps) => {
 
     const activeItems = props?.items && props.items.length > 0 ? props.items : defaultItems
 
+    const onOpenMenu = () => dispatch(openMenu())
+
+    const onCloseMenu = () => dispatch(closeMenu())
+
+    const onToggleMenu = () => {
+        if (isMenuOpen) {
+            dispatch(closeMenu())
+        } else {
+            dispatch(openMenu())
+        }
+    }
+
+    useEffect(() => {
+        if (!isMenuRoute) return
+
+        const handleScroll = () => {
+            const messageEl = document.getElementById('message')
+            if (messageEl) {
+                setHasPassedMessage(messageEl.getBoundingClientRect().bottom <= 0)
+            } else {
+                setHasPassedMessage(window.scrollY >= window.innerHeight)
+            }
+        }
+
+        const rafId = window.requestAnimationFrame(handleScroll)
+        window.addEventListener('scroll', handleScroll, { passive: true })
+        window.addEventListener('resize', handleScroll, { passive: true })
+
+        return () => {
+            window.cancelAnimationFrame(rafId)
+            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('resize', handleScroll)
+        }
+    }, [isMenuRoute])
+
     return {
         isMenuOpen,
         isMenuVisible,
@@ -100,6 +116,7 @@ export const useMenu = (props?: MenuProps) => {
         activeTitle,
         activeBtnVariant,
         activeItems,
+
         onOpenMenu,
         onCloseMenu,
         onToggleMenu,

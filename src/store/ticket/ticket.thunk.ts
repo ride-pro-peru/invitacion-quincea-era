@@ -1,33 +1,81 @@
-import type { AppDispatch } from "../store";
-import { toast } from "sonner";
+import { toast } from 'sonner'
+import type { AppDispatch, RootState } from '../store'
+import { setError, setIsChecking, setIsLoading, setTicket } from './ticket.slice'
+import { TicketHelpers } from '@/common/utils/ticket.helpers'
+import { TicketService } from '@/common/services/ticket.service'
 
-import { setIsLoading, setTicket } from "./ticket.slice"
-import { instance } from "@/common/config/http.plugin"
-import type { Ticket } from "@/modules/ticket/interfaces/ticket.interface"
-import { isAxiosError } from "axios";
+interface GetTicketOptions {
+    silent?: boolean
+}
 
-export const startGettingTicket = (keyPass: string) => {
+export const startGettingTicket = (
+    keyPass: string,
+    templateName: string,
+    options?: GetTicketOptions
+) => {
     return async (dispatch: AppDispatch): Promise<boolean> => {
+        dispatch(setIsLoading(true))
+        dispatch(setError(null))
+
         try {
-            dispatch(setIsLoading(true))
+            const result = await TicketService.getByKeyPass(keyPass)
 
-            const { data: ticket } = await instance.get<Ticket>(`tickets/keyPass/${keyPass}`)
-
-            dispatch(setTicket(ticket))
-            localStorage.setItem('abrasa-ticket', JSON.stringify(ticket))
-            toast.success(`Bienvenido ${ticket.name}`)
-            return true
-        } catch (error: unknown) {
-            if (isAxiosError(error)) {
-                if (error.response?.status === 404) {
-                    toast.error('Boleto no encontrado. Verifica tu clave de acceso.')
-                } else {
-                    toast.error(error.response?.data?.errors?.[0] ?? 'Ocurrió un error. Intenta de nuevo.')
+            if (!('ticket' in result)) {
+                if (result.shouldClearSession) {
+                    TicketHelpers.clearStoredTicket(templateName)
+                    dispatch(setTicket(null))
                 }
+
+                dispatch(setError(result.message))
+                if (!options?.silent) {
+                    toast.error(result.message)
+                }
+                return false
             }
-            return false
+
+            dispatch(setTicket(result.ticket))
+            TicketHelpers.setStoredKeyPass(templateName, result.ticket.keyPass)
+
+            if (!options?.silent) {
+                toast.success(`Bienvenido ${result.ticket.name}`)
+            }
+
+            return true
         } finally {
             dispatch(setIsLoading(false))
         }
     }
-}
+}
+
+export const startCheckingTicket = (templateName: string) => {
+    return async (dispatch: AppDispatch, getState: () => RootState): Promise<void> => {
+        dispatch(setIsChecking(true))
+        dispatch(setError(null))
+
+        try {
+            const storedKeyPass = TicketHelpers.getStoredKeyPass(templateName)
+
+            if (!storedKeyPass) {
+                const envTicket = import.meta.env.VITE_TICKET_ID ? getState().ticket.ticket : null
+                dispatch(setTicket(envTicket))
+                return
+            }
+
+            const result = await TicketService.getByKeyPass(storedKeyPass)
+
+            if (!('ticket' in result)) {
+                if (result.shouldClearSession) {
+                    TicketHelpers.clearStoredTicket(templateName)
+                }
+                dispatch(setError(result.message))
+                dispatch(setTicket(null))
+                return
+            }
+
+            dispatch(setTicket(result.ticket))
+            TicketHelpers.setStoredKeyPass(templateName, result.ticket.keyPass)
+        } finally {
+            dispatch(setIsChecking(false))
+        }
+    }
+}

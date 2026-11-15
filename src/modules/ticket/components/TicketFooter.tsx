@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Ticket } from '@/common/types/ticket.types'
+import type { Ticket } from '@/common/types'
 
 interface Props {
     ticket: Ticket

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { MagnifyingGlassIcon } from '@phosphor-icons/react'
-import { useTicket, useNavigation } from '@/common/hooks'
+import { useTicket } from '@/common/hooks'
 import { Button } from '@/common/components/button/Button'
 
 interface TicketSearch {
@@ -9,17 +9,13 @@ interface TicketSearch {
 }
 
 export const SearchForm: React.FC = () => {
-    const { goTo } = useNavigation()
     const { onGetTicket, isLoading } = useTicket()
     const { register, handleSubmit, formState: { errors } } = useForm<TicketSearch>({
         defaultValues: { keyPass: '' }
     })
 
     const onSubmit = async (data: TicketSearch) => {
-        const isSuccess = await onGetTicket(data.keyPass)
-        if (isSuccess) {
-            goTo('/envelope')
-        }
+        await onGetTicket(data.keyPass.trim())
     }
 
     return (

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import {
     XIcon,
     EnvelopeSimpleIcon,
@@ -11,11 +10,13 @@ import {
     GiftIcon,
     CheckCircleIcon,
     TicketIcon,
+    SignOutIcon,
 } from '@phosphor-icons/react'
 
-import { useMenu } from '@/common/hooks'
+import { useInvitationConfig, useMenu, useNavigation, useTicket } from '@/common/hooks'
 import { Button } from '@/common/components/button/Button'
 import type { MenuSidebarProps } from '@/common/types'
+import { APP_ROUTES } from '@/router/routes'
 import logo from '@/assets/images/icons/logo.svg'
 
 interface SectionItem {
@@ -38,8 +39,13 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
     items = [],
     children,
 }) => {
-    const navigate = useNavigate()
+    const { goTo } = useNavigation()
     const { isMenuOpen, onCloseMenu, activeTitle } = useMenu()
+    const { config } = useInvitationConfig()
+    const { ticket, onRemoveTicket } = useTicket()
+    const hasTicketingSystem = Boolean(config.hasTicketingSystem)
+    const canAccessTicket = Boolean(hasTicketingSystem && ticket)
+    const showFooter = canAccessTicket || !hasTicketingSystem
 
     const importantSections = React.useMemo(() => {
         if (items && items.length > 0 && items.length <= 5) {
@@ -50,6 +56,16 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
         }
         return DEFAULT_SECTIONS
     }, [items])
+
+    const handleNavigate = (path: string) => {
+        onCloseMenu();
+        goTo(path);
+    }
+
+    const handleExitTicket = () => {
+        onRemoveTicket()
+        goTo(APP_ROUTES.search)
+    }
 
     const overlayClass = `menu-overlay ${isMenuOpen ? 'menu-overlay--open' : ''}`
     const sidebarClass = `menu-sidebar ${isMenuOpen ? 'menu-sidebar--open' : ''}`
@@ -83,31 +99,27 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
                             radius="sm"
                             icon={<EnvelopeSimpleIcon size={20} weight="regular" />}
                             iconPosition="left"
-                            onClick={() => {
-                                navigate('/envelope')
-                                onCloseMenu()
-                            }}
+                            onClick={() => handleNavigate(APP_ROUTES.envelope)}
                             className="menu-sidebar__action-btn menu-sidebar__action-btn--envelope"
                         >
                             <span>Sobre Virtual</span>
                             <ArrowRightIcon size={16} className="menu-sidebar__action-btn-arrow" />
                         </Button>
 
-                        <Button
-                            variant="secondary"
-                            fullWidth
-                            radius="sm"
-                            icon={<TicketIcon size={20} weight="regular" />}
-                            iconPosition="left"
-                            onClick={() => {
-                                navigate('/ticket')
-                                onCloseMenu()
-                            }}
-                            className="menu-sidebar__action-btn menu-sidebar__action-btn--ticket"
-                        >
-                            <span>Boleto Digital</span>
-                            <ArrowRightIcon size={16} className="menu-sidebar__action-btn-arrow" />
-                        </Button>
+                        {canAccessTicket && (
+                            <Button
+                                variant="secondary"
+                                fullWidth
+                                radius="sm"
+                                icon={<TicketIcon size={20} weight="regular" />}
+                                iconPosition="left"
+                                onClick={() => handleNavigate(APP_ROUTES.ticket)}
+                                className="menu-sidebar__action-btn menu-sidebar__action-btn--ticket"
+                            >
+                                <span>Boleto Digital</span>
+                                <ArrowRightIcon size={16} className="menu-sidebar__action-btn-arrow" />
+                            </Button>
+                        )}
                     </div>
 
                     {children ? (
@@ -135,12 +147,28 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
                     )}
                 </div>
 
-                <footer className="menu-sidebar__footer">
-                    <div className="menu-sidebar__footer-badge">
-                        <HeartIcon size={16} weight="fill" className="menu-sidebar__footer-icon" />
-                        <span>¡Te espero en mis XV años!</span>
-                    </div>
-                </footer>
+                {showFooter && (
+                    <footer className="menu-sidebar__footer">
+                        {canAccessTicket ? (
+                            <Button
+                                variant="outline"
+                                fullWidth
+                                radius="sm"
+                                icon={<SignOutIcon size={18} weight="regular" />}
+                                iconPosition="left"
+                                onClick={handleExitTicket}
+                                className="menu-sidebar__logout-btn"
+                            >
+                                Salir del boleto
+                            </Button>
+                        ) : (
+                            <div className="menu-sidebar__footer-badge">
+                                <HeartIcon size={16} weight="fill" className="menu-sidebar__footer-icon" />
+                                <span>¡Te espero en mis XV años!</span>
+                            </div>
+                        )}
+                    </footer>
+                )}
             </aside>
         </>
     )

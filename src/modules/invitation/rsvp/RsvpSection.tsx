@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { LinkIcon } from '@phosphor-icons/react'
 
 import { useTicket, useInvitationConfig, useNavigation } from '@/common/hooks'
+import { APP_ROUTES } from '@/router/routes'
 import { SectionHeader } from '@/common/components/section-header/SectionHeader'
 import { Button } from '@/common/components/button/Button'
 
@@ -21,6 +22,7 @@ export const RsvpSection: React.FC = () => {
     const showTicketSystem = Boolean(config?.hasTicketingSystem || sections?.ticket?.showTicket)
     if (!showTicketSystem) return null
 
+    const canViewTicket = Boolean(config.hasTicketingSystem && ticket)
     const guestName = ticket?.name || 'Familia Invitada'
 
     return (
@@ -107,23 +109,25 @@ export const RsvpSection: React.FC = () => {
                                 Presiona el botón a continuación para consultar tus boletos asignados e información de tus pases.
                             </motion.p>
 
-                            <motion.div
-                                className="rsvp__action"
-                                initial={{ opacity: 0, y: 18, scale: 0.94 }}
-                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.9, delay: 0.9, ease: CUBIC_EASE }}
-                            >
-                                <Button
-                                    variant="secondary"
-                                    radius="full"
-                                    icon={<LinkIcon size={20} />}
-                                    onClick={() => goTo('/ticket')}
-                                    className="rsvp__ticket-btn"
+                            {canViewTicket && (
+                                <motion.div
+                                    className="rsvp__action"
+                                    initial={{ opacity: 0, y: 18, scale: 0.94 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.9, delay: 0.9, ease: CUBIC_EASE }}
                                 >
-                                    Ver mis boletos
-                                </Button>
-                            </motion.div>
+                                    <Button
+                                        variant="secondary"
+                                        radius="full"
+                                        icon={<LinkIcon size={20} />}
+                                        onClick={() => goTo(APP_ROUTES.ticket)}
+                                        className="rsvp__ticket-btn"
+                                    >
+                                        Ver mis boletos
+                                    </Button>
+                                </motion.div>
+                            )}
                         </div>
                     </motion.div>
                 </motion.div>

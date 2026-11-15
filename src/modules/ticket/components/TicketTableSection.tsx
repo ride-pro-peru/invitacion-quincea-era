@@ -3,7 +3,7 @@ import { ArmchairIcon } from '@phosphor-icons/react'
 import { useModal } from '@/common/hooks/useModal'
 import { MODAL_NAMES } from '@/store/ui/modal.slice'
 import { Button } from '@/common/components/button/Button'
-import type { Ticket } from '@/common/types/ticket.types'
+import type { Ticket } from '@/common/types'
 
 interface Props {
     ticket?: Ticket | null
@@ -11,7 +11,7 @@ interface Props {
 
 export const TicketTableSection: React.FC<Props> = ({ ticket }) => {
     const { onOpenModal } = useModal()
-    const tableInfo = ticket?.table || 'Mesa 1'
+    const tableInfo = ticket?.table?.trim() || 'Por Asignar'
 
     return (
         <div className="ticket__table-section">

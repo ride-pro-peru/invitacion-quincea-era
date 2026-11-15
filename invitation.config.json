@@ -1,5 +1,6 @@
 {
   "metaTitle": "Jade Silvestre | XV Años",
+  "templateName": "xv-jade-silvestre",
   "eventType": "xv",
   "packageTier": "oro",
   "commercial": {
@@ -15,13 +16,13 @@
   },
   "ui": {
     "menu": {
-      "show": true,
+      "showMenu": true,
       "variant": "bar",
       "title": "Grethel Stefania",
       "buttonVariant": "icon"
     },
     "music": {
-      "show": true,
+      "showMusic": true,
       "variant": "floating",
       "title": "Música de fondo",
       "buttonVariant": "primary"
@@ -44,9 +45,6 @@
       "subtitle": "Mis XV Años",
       "date": "18 DE DICIEMBRE DE 2026",
       "city": "Aguascalientes, México"
-    },
-    "scratchReveal": {
-      "showScratchReveal": true
     },
     "message": {
       "showMessage": true,
@@ -188,6 +186,11 @@
       "subtitle": "Comparte tus recuerdos y momentos de la fiesta con nosotros",
       "albumUrl": "https://photos.app.goo.gl/xqUqNJ5Cvm9mjo7m8"
     },
+    "farewell": {
+      "showFarewell": true,
+      "hashtag": "#GrethelStefaniaXV",
+      "thankYouMessage": "Gracias por ser parte fundamental en mi vida y acompañarme en este día tan especial."
+    },
     "ticket": {
       "showTicket": true
     },
@@ -218,12 +221,10 @@
       "monogram": {
         "showMonogram": true,
         "title": "Monograma del Evento"
+      },
+      "scratchReveal": {
+        "showScratchReveal": true
       }
-    },
-    "farewell": {
-      "showFarewell": true,
-      "hashtag": "#GrethelStefaniaXV",
-      "thankYouMessage": "Gracias por ser parte fundamental en mi vida y acompañarme en este día tan especial."
     }
   }
 }

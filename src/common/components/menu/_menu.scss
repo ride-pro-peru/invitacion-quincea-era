@@ -385,6 +385,24 @@
         color: vars.$color-secondary-600;
     }
 
+    &__logout-btn {
+        font-family: vars.$font-serif !important;
+        font-size: 1.25rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.06em !important;
+        text-transform: uppercase !important;
+        padding: 1.15rem 1.6rem !important;
+        border-radius: 0.6rem !important;
+        border-color: rgba(vars.$color-primary, 0.35) !important;
+        color: vars.$color-primary-900 !important;
+
+        &:hover:not(:disabled) {
+            background-color: #fef2f2 !important;
+            border-color: #dc2626 !important;
+            color: #dc2626 !important;
+        }
+    }
+
     &__accordions {
         display: flex;
         flex-direction: column;

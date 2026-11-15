@@ -4,8 +4,8 @@ export const useNavigation = () => {
     const navigate = useNavigate()
 
     const goTo = (path: string) => {
-        window.scrollTo({ top: 0 });
         navigate(path)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     const goBack = () => navigate(-1)
     const goHome = () => navigate('/')
