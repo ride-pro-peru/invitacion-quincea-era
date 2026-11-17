@@ -1,28 +1,25 @@
-/* ==========================================================================
-   Font Registry (Exclusively: Hellowin for Titles & Afacad for Secondary/Body)
-   ========================================================================== */
-
 $font-hellowin: 'Hellowin', cursive;
-$font-afacad: 'Afacad', sans-serif;
-$font-agrave-pro: 'Afacad', sans-serif;
+$font-body: 'DM Sans Variable', 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-// All packs point strictly to the 2 user-defined fonts
-$font-p1-cursive: 'Hellowin', cursive;
-$font-p1-serif: 'Afacad', sans-serif;
-$font-p1-sans: 'Afacad', sans-serif;
+$font-afacad: $font-body;
+$font-agrave-pro: $font-body;
 
-$font-p2-cursive: 'Hellowin', cursive;
-$font-p2-serif: 'Afacad', sans-serif;
-$font-p2-sans: 'Afacad', sans-serif;
+$font-p1-cursive: $font-hellowin;
+$font-p1-serif: $font-body;
+$font-p1-sans: $font-body;
 
-$font-p3-cursive: 'Hellowin', cursive;
-$font-p3-serif: 'Afacad', sans-serif;
-$font-p3-sans: 'Afacad', sans-serif;
+$font-p2-cursive: $font-hellowin;
+$font-p2-serif: $font-body;
+$font-p2-sans: $font-body;
 
-$font-p4-cursive: 'Hellowin', cursive;
-$font-p4-serif: 'Afacad', sans-serif;
-$font-p4-sans: 'Afacad', sans-serif;
+$font-p3-cursive: $font-hellowin;
+$font-p3-serif: $font-body;
+$font-p3-sans: $font-body;
 
-$font-p5-cursive: 'Hellowin', cursive;
-$font-p5-serif: 'Afacad', sans-serif;
-$font-p5-sans: 'Afacad', sans-serif;
+$font-p4-cursive: $font-hellowin;
+$font-p4-serif: $font-body;
+$font-p4-sans: $font-body;
+
+$font-p5-cursive: $font-hellowin;
+$font-p5-serif: $font-body;
+$font-p5-sans: $font-body;

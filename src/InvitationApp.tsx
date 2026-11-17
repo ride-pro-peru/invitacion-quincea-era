@@ -10,6 +10,7 @@ import { DrawerMaster } from '@/common/components/drawer/DrawerMaster'
 import { ToastContainer } from '@/common/components/toast/ToastContainer'
 import { Menu } from '@/common/components/menu/Menu'
 import { MusicPlayer } from '@/common/components/music-player/MusicPlayer'
+import { WhatsAppFab } from '@/common/components/whatsapp-fab/WhatsAppFab'
 
 const InvitationAppContent: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const InvitationAppContent: React.FC = () => {
       <ToastContainer />
       <Menu />
       <MusicPlayer />
+      <WhatsAppFab />
     </BrowserRouter>
   )
 }

@@ -41,3 +41,7 @@
 // Invitation Search & Ticket
 @use '../../modules/search/search';
 @use '../../modules/ticket/ticket';
+
+// Modern mobile-first styles and WhatsApp FAB
+@use '../components/whatsapp-fab/whatsapp-fab';
+@use './modern';
