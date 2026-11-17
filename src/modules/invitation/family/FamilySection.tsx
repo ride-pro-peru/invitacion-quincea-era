@@ -44,27 +44,15 @@ export const FamilySection: React.FC = () => {
                 </motion.div>
 
                 <div className="family-section__body">
-                    <motion.div
-                        className="family-section__quote-container"
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-10% 0px' }}
-                        transition={{ duration: 1.0, delay: 0.3, ease: FLUID_EASE }}
-                    >
-                        <p className="family-section__quote">
-                            “Pues mandará a sus ángeles acerca de tí, para que te guarden en todos tus caminos.”
-                        </p>
-                        <span className="family-section__quote-author">&mdash; SALMO 91:11 &mdash;</span>
-                    </motion.div>
-
                     <motion.h2
                         className="family-section__blessing"
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: '-10% 0px' }}
-                        transition={{ duration: 1.0, delay: 0.4, ease: FLUID_EASE }}
+                        transition={{ duration: 1.0, delay: 0.25, ease: FLUID_EASE }}
                     >
-                        CON LA BENDICIÓN DE DIOS Y EN COMPAÑÍA<br />{parents.length === 1 ? 'DE MI MADRE Y PADRINOS' : 'DE MIS PADRES Y PADRINOS'}
+                        Con la bendición de Dios y en compañía<br />
+                        {parents.length === 1 ? 'de mi madre y padrinos' : 'de mis padres y padrinos'}
                     </motion.h2>
 
                     <div className="family-section__grid">
@@ -73,9 +61,9 @@ export const FamilySection: React.FC = () => {
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: '-10% 0px' }}
-                            transition={{ duration: 1.0, delay: 0.5, ease: FLUID_EASE }}
+                            transition={{ duration: 1.0, delay: 0.4, ease: FLUID_EASE }}
                         >
-                            <h3 className="family-section__role">{parents.length === 1 ? 'MI MADRE' : 'MIS PADRES'}</h3>
+                            <h3 className="family-section__role">{parents.length === 1 ? 'Mi Madre' : 'Mis Padres'}</h3>
                             <div className="family-section__names">
                                 {parents.map((name, index) => (
                                     <p key={index} className="family-section__name">{name}</p>
@@ -88,9 +76,9 @@ export const FamilySection: React.FC = () => {
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: '-10% 0px' }}
-                            transition={{ duration: 1.0, delay: 0.6, ease: FLUID_EASE }}
+                            transition={{ duration: 1.0, delay: 0.55, ease: FLUID_EASE }}
                         >
-                            <h3 className="family-section__role">MIS PADRINOS</h3>
+                            <h3 className="family-section__role">Mis Padrinos</h3>
                             <div className="family-section__names">
                                 {godparents.map((name, index) => (
                                     <p key={index} className="family-section__name">{name}</p>

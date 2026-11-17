@@ -66,11 +66,6 @@ body {
 
 /* ---------- Textos de lectura (piso mínimo) ---------- */
 .message-section__text,
-.family-section__blessing,
-.family-section__quote,
-.family-section__quote-author,
-.family-section__role,
-.family-section__name,
 .dress-code-section__description,
 .dress-code-section__attire-label,
 .dress-code-section__attire-line,
@@ -96,10 +91,6 @@ body {
     font-size: max(1.75rem, 17px);
     line-height: 1.75;
     color: var(--xv-ink);
-}
-
-.family-section__quote {
-    font-style: italic;
 }
 
 .places-item__venue {
@@ -157,7 +148,6 @@ body {
 @media (max-width: 480px) {
     .countdown-section__flower-1,
     .countdown-section__flower-2,
-    .family-section__decoration,
     .dress-code-section__flor,
     .itinerary__flower-desktop,
     .presents-section__card-flor,
