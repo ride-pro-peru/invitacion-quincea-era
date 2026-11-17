@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useInvitationConfig } from '@/common/hooks'
 
-import flowers from '@/assets/images/icons/flores-inferiores.svg'
+import flowers from '@/assets/images/icons/flores-inferiores.png'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as const
 
@@ -64,7 +64,7 @@ export const FamilySection: React.FC = () => {
                         viewport={{ once: true, margin: '-10% 0px' }}
                         transition={{ duration: 1.0, delay: 0.4, ease: FLUID_EASE }}
                     >
-                        CON LA BENDICIÓN DE DIOS Y EN COMPAÑÍA<br />DE MIS PADRES Y PADRINOS
+                        CON LA BENDICIÓN DE DIOS Y EN COMPAÑÍA<br />{parents.length === 1 ? 'DE MI MADRE Y PADRINOS' : 'DE MIS PADRES Y PADRINOS'}
                     </motion.h2>
 
                     <div className="family-section__grid">
@@ -75,7 +75,7 @@ export const FamilySection: React.FC = () => {
                             viewport={{ once: true, margin: '-10% 0px' }}
                             transition={{ duration: 1.0, delay: 0.5, ease: FLUID_EASE }}
                         >
-                            <h3 className="family-section__role">MIS PADRES</h3>
+                            <h3 className="family-section__role">{parents.length === 1 ? 'MI MADRE' : 'MIS PADRES'}</h3>
                             <div className="family-section__names">
                                 {parents.map((name, index) => (
                                     <p key={index} className="family-section__name">{name}</p>

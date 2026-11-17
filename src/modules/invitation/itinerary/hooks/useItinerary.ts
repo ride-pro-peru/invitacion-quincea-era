@@ -74,7 +74,7 @@ export const useItinerary = () => {
                 fireConfetti({
                     preset: 'side-cannons',
                     particleCount: 150,
-                    colors: ['#384001', '#b3bf5a', '#f2f2eb', '#fee0ef', '#8c8072', '#C29F53', '#9CB08D'],
+                    colors: ['#962d2e', '#731919', '#d9b991', '#a66e4e', '#FFD700', '#F3E5AB'],
                 })
             }
         } else {

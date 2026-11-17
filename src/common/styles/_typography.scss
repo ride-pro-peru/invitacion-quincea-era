@@ -1,129 +1,22 @@
 @use './variables' as *;
 
 /* ==========================================================================
-   Font Imports (@font-face)
+   Font Imports (@font-face) - Strictly 2 Custom Fonts
    ========================================================================== */
 
-/* Pack 1 */
+/* Titles: Hellowin */
 @font-face {
-    font-family: 'Alex Brush';
-    src: url('../../assets/fonts/pack-1/AlexBrushFont.ttf') format('truetype');
+    font-family: 'Hellowin';
+    src: url('../../assets/fonts/custom/HellowinFont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
+/* Secondary & Body: Agrave Pro */
 @font-face {
-    font-family: 'Cormorant Garamond';
-    src: url('../../assets/fonts/pack-1/CormorantGaramondFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../../assets/fonts/pack-1/MontserratFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Pack 2 */
-@font-face {
-    font-family: 'Pinyon Script';
-    src: url('../../assets/fonts/pack-2/PinyonScriptFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Bodoni Moda';
-    src: url('../../assets/fonts/pack-2/BodoniModaFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Plus Jakarta Sans';
-    src: url('../../assets/fonts/pack-2/PlusJakartaSansFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Pack 3 */
-@font-face {
-    font-family: 'Greating';
-    src: url('../../assets/fonts/pack-3/GreatingFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('../../assets/fonts/pack-3/EBGaramondFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../../assets/fonts/pack-3/OpenSansFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Pack 4 */
-@font-face {
-    font-family: 'Amsterdam Signature';
-    src: url('../../assets/fonts/pack-4/AmsterdamSignatureFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../../assets/fonts/pack-4/PlayfairDisplayFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('../../assets/fonts/pack-4/RalewayFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Pack 5 */
-@font-face {
-    font-family: 'Halimunde Signature';
-    src: url('../../assets/fonts/pack-5/HalimundeSignatureFont.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Cinzel';
-    src: url('../../assets/fonts/pack-5/CinzelFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Outfit';
-    src: url('../../assets/fonts/pack-5/OutfitFont.ttf') format('truetype');
+    font-family: 'Agrave Pro';
+    src: url('../../assets/fonts/custom/AgraveProFont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -285,4 +178,18 @@ select {
 
 .font-sans-5 {
     font-family: $font-p5-sans;
+}
+
+.font-hellowin {
+    font-family: $font-title;
+}
+
+.font-agrave-pro {
+    font-family: $font-secondary;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.font-secondary {
+    font-family: $font-secondary;
 }

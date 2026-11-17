@@ -1,31 +1,17 @@
 {
-  "metaTitle": "Jade Silvestre | XV Años",
-  "templateName": "xv-jade-silvestre",
-  "eventType": "xv",
-  "packageTier": "oro",
-  "commercial": {
-    "packageName": "Oro VIP Premium (Con Fotos)",
-    "basePrice": 1099.99,
-    "ticketPrice": 0,
-    "addonsPrice": 0,
-    "totalPrice": 1099.99
-  },
   "theme": {
     "fontPack": 5,
-    "palette": 4
-  },
-  "ui": {
+    "palette": 2,
     "menu": {
-      "showMenu": true,
-      "variant": "bar",
-      "title": "Grethel Stefania",
+      "variant": "floating",
+      "title": "Cielo Alvarado",
       "buttonVariant": "icon"
     },
     "music": {
-      "showMusic": true,
       "variant": "floating",
-      "title": "Música de fondo",
-      "buttonVariant": "primary"
+      "buttonVariant": "primary",
+      "songTitle": "Música de fondo",
+      "artistName": "Música del evento"
     }
   },
   "config": {
@@ -41,10 +27,10 @@
     },
     "hero": {
       "showHero": true,
-      "names": "Grethel Stefania",
+      "names": "Cielo Alvarado Diaz",
       "subtitle": "Mis XV Años",
-      "date": "18 DE DICIEMBRE DE 2026",
-      "city": "Aguascalientes, México"
+      "date": "12 DE DICIEMBRE DE 2026",
+      "city": "Chimbote, Perú"
     },
     "message": {
       "showMessage": true,
@@ -53,38 +39,29 @@
     },
     "countdown": {
       "showCountdown": true,
-      "targetDate": "2026-12-18T19:00:00"
+      "targetDate": "2026-12-12T19:00:00"
     },
     "family": {
       "showFamily": true,
-      "title": "Mis Padres y Padrinos",
+      "title": "Mi Madre y Padrinos",
       "parents": [
-        "Francisco Javier Nava Trinidad",
-        "Yesenia Ortega Ortíz"
+        "Luz Madeleyne Diaz Valdiviezo"
       ],
       "godparents": [
-        "Rosa Trinidad Carmona",
-        "Rosa Ma.Ortíz Saucedo"
+        "Fiorelli Bossio Arroyo de Donayre",
+        "Luis Alberto Donayre Valdes"
       ]
     },
     "places": {
       "showPlaces": true,
       "locations": [
         {
-          "title": "Ceremonia Religiosa",
-          "venue": "Parroquia del Sagrado Corazón de Jesús",
-          "location": "5 de Mayo 602, Zona Centro, 20000 Aguascalientes, Ags.",
-          "time": "19:00 HRS",
-          "date": "18-12-2026",
-          "url": "https://maps.app.goo.gl/oKMjmVM277UA1JtQ8"
-        },
-        {
           "title": "Recepción & Fiesta",
-          "venue": "Casa de Piedra",
-          "location": "Av. Guadalupe Gonzalez 1116, 20329 Pocitos, Ags.",
-          "time": "21:00 HRS",
-          "date": "18-12-2026",
-          "url": "https://maps.app.goo.gl/qiKzrazppDADxFeu5"
+          "venue": "Salón de Eventos Imperio",
+          "location": "Jr. Francisco Bolognesi 343, Chimbote",
+          "time": "19:00 HRS",
+          "date": "12-12-2026",
+          "url": "https://maps.app.goo.gl/Hj2pjzeTY3kRsZPi8"
         }
       ]
     },
@@ -93,31 +70,27 @@
       "itinerary": [
         {
           "time": "19:00 HRS",
-          "event": "Ceremonia Religiosa"
+          "event": "Recepción de Invitados"
         },
         {
-          "time": "21:00 HRS",
-          "event": "Recepción & Fiesta"
+          "time": "20:00 HRS",
+          "event": "Entrada de la Quinceañera"
+        },
+        {
+          "time": "20:30 HRS",
+          "event": "Vals & Brindis de Honor"
+        },
+        {
+          "time": "21:15 HRS",
+          "event": "Cena de Gala"
         },
         {
           "time": "22:00 HRS",
-          "event": "Coctél de Bienvenida"
+          "event": "Apertura de Pista & Fiesta"
         },
         {
-          "time": "22:30 HRS",
-          "event": "Cena (3 tiempos)"
-        },
-        {
-          "time": "23:00 HRS",
-          "event": "Vals y Brindis"
-        },
-        {
-          "time": "23:30 HRS",
-          "event": "Apertura de Pista"
-        },
-        {
-          "time": "01:00 HRS",
-          "event": "Música Banda"
+          "time": "00:00 HRS",
+          "event": "Hora Loca"
         },
         {
           "time": "02:00 HRS",
@@ -131,7 +104,7 @@
       "description": "Te sugerimos vestir de etiqueta formal",
       "attire": {
         "men": "Traje o Smoking con corbata o moño",
-        "women": "Vestido Glam, Brillante & Perlas"
+        "women": "Vestido Glam, Elegante & Cómodo"
       },
       "colors": {
         "suggested": [
@@ -139,6 +112,7 @@
           "dorado"
         ],
         "avoid": [
+          "rojo",
           "blanco"
         ]
       }
@@ -146,21 +120,21 @@
     "details": {
       "showDetails": true,
       "title": "Detalles Importantes",
-      "noKids": true,
-      "noKidsMessage": "Aunque amamos a los pequeños, la recepción es solo para adultos.",
+      "noKids": false,
+      "noKidsMessage": "Agradecemos tu presencia y compañía en este gran día.",
       "punctuality": true,
       "punctualityMessage": "Te pedimos ser puntual para no perderte ningún momento especial de la celebración.",
-      "hashtag": "#GrethelStefaniaXV"
+      "hashtag": "#CieloXV"
     },
     "presents": {
       "showPresents": true,
       "title": "Mesa de Regalos",
-      "url": "https://mesaderegalos.liverpool.com.mx",
+      "url": "",
       "bankDetails": {
-        "bank": "BBVA",
-        "holder": "Francisco Nava",
-        "clabe": "012180012345678901",
-        "account": "1234567890"
+        "bank": "BCP / Yape",
+        "holder": "Luz Madeleyne Diaz Valdiviezo",
+        "clabe": "",
+        "account": ""
       },
       "envelopeRain": true
     },
@@ -184,11 +158,11 @@
       "showGuestPhotos": true,
       "title": "Fotos de los Invitados",
       "subtitle": "Comparte tus recuerdos y momentos de la fiesta con nosotros",
-      "albumUrl": "https://photos.app.goo.gl/xqUqNJ5Cvm9mjo7m8"
+      "albumUrl": "https://photos.app.goo.gl"
     },
     "farewell": {
       "showFarewell": true,
-      "hashtag": "#GrethelStefaniaXV",
+      "hashtag": "#CieloXV",
       "thankYouMessage": "Gracias por ser parte fundamental en mi vida y acompañarme en este día tan especial."
     },
     "ticket": {
@@ -199,7 +173,7 @@
         "showLodging": false,
         "title": "Hospedaje & Clima",
         "hotels": [],
-        "weatherCity": "Aguascalientes"
+        "weatherCity": "Chimbote"
       },
       "ourStory": {
         "showOurStory": false,
@@ -216,7 +190,7 @@
       "playlistAndPhotos": {
         "showPlaylistAndPhotos": true,
         "title": "Música & Fotos de Invitados",
-        "qrAlbumUrl": "https://photos.app.goo.gl/xqUqNJ5Cvm9mjo7m8"
+        "qrAlbumUrl": "https://photos.app.goo.gl"
       },
       "monogram": {
         "showMonogram": true,
@@ -225,6 +199,31 @@
       "scratchReveal": {
         "showScratchReveal": true
       }
+    }
+  },
+  "metaTitle": "Cielo Alvarado Diaz | Mis XV Años",
+  "templateName": "xv-cielo-alvarado",
+  "eventType": "xv",
+  "packageTier": "oro",
+  "commercial": {
+    "packageName": "Oro VIP Premium (Con Fotos)",
+    "basePrice": 1099.99,
+    "ticketPrice": 0,
+    "addonsPrice": 0,
+    "totalPrice": 1099.99
+  },
+  "ui": {
+    "menu": {
+      "showMenu": true,
+      "variant": "bar",
+      "title": "Cielo Alvarado",
+      "buttonVariant": "icon"
+    },
+    "music": {
+      "showMusic": true,
+      "variant": "floating",
+      "title": "Música de fondo",
+      "buttonVariant": "primary"
     }
   }
 }

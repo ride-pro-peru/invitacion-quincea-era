@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { SectionHeader } from '@/common/components/section-header/SectionHeader'
 import { ConfirmationSectionForm } from './ConfirmationSectionForm'
 import { useInvitationConfig } from '@/common/hooks'
-import flor from '@/assets/images/icons/flor-2.svg'
+import flor from '@/assets/images/icons/flor-central.png'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as const
 

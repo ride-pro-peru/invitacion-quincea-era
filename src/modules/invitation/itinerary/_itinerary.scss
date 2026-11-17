@@ -268,11 +268,11 @@
     }
 
     &__time {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.2rem;
         font-weight: 600;
         letter-spacing: 0.18em;
-        color: vars.$color-secondary-600;
+        color: #6b7280;
         text-transform: uppercase;
         margin-bottom: 0.3rem;
         line-height: 1.2;
@@ -291,10 +291,10 @@
 
 
     &__event {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1rem;
-        font-weight: 300;
-        color: #333333;
+        font-weight: 400;
+        color: #262626;
         line-height: 1.4;
         text-transform: uppercase;
         letter-spacing: 0.08em;

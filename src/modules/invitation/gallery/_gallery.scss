@@ -2,7 +2,7 @@
 @use '../../../common/styles/mixins' as mix;
 
 .gallery-section {
-    background: vars.$color-secondary-100;
+    background: #ffffff;
     padding: 8rem 0;
 
     @include mix.respondToMin('md') {
@@ -54,6 +54,7 @@
     &__tile {
         position: relative;
         overflow: hidden;
+        border-radius: 20px;
         box-shadow: 0 8px 24px rgba(vars.$color-primary, 0.08);
         cursor: pointer;
 

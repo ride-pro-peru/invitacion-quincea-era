@@ -42,10 +42,10 @@
     }
 
     &__pretitle {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.8rem;
         font-weight: 400;
-        color: vars.$color-primary-600;
+        color: #6b7280;
         line-height: 1.4;
         margin: 0 0 0.4rem 0;
 
@@ -58,21 +58,21 @@
         }
 
         &--uppercase {
-            font-family: vars.$font-sans;
+            font-family: vars.$font-secondary;
             font-size: 1.2rem;
             font-weight: 600;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: vars.$color-primary-700;
+            color: #6b7280;
             margin-bottom: 0.8rem;
         }
     }
 
     &__title {
-        font-family: vars.$font-p1-cursive;
+        font-family: vars.$font-title;
         font-size: 3.4rem;
         letter-spacing: -0.01em;
-        color: vars.$color-secondary-400;
+        color: #4b5563;
         line-height: 1.2;
         margin: 0;
 
@@ -84,7 +84,7 @@
     &__subtitle {
         font-family: vars.$font-serif;
         font-size: 1.2rem;
-        color: vars.$color-text-600;
+        color: #4b5563;
         line-height: 1.6;
         margin: 0.8rem 0 0 0;
         max-width: 56rem;

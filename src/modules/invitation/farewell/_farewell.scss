@@ -53,7 +53,8 @@
         padding: 0.9rem 0.9rem 3.2rem 0.9rem;
         box-shadow: 0 1.4rem 3.5rem rgba(0, 0, 0, 0.12), 0 0.4rem 1rem rgba(0, 0, 0, 0.05);
         border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 0.2rem;
+        border-radius: 16px;
+        overflow: hidden;
         width: 18rem;
         transition: transform 0.4s ease, box-shadow 0.4s ease;
 
@@ -97,7 +98,7 @@
         width: 100%;
         aspect-ratio: 1 / 1.15;
         overflow: hidden;
-        background-color: vars.$color-secondary-100;
+        background-color: #ffffff;
 
         picture {
             display: block;
@@ -126,11 +127,11 @@
     }
 
     &__subtitle {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.15rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: vars.$color-primary-700;
+        color: #6b7280;
         margin: 0;
 
         @include mix.respondToMin('md') {
@@ -140,9 +141,9 @@
     }
 
     &__title {
-        font-family: vars.$font-serif;
-        font-size: 2.5rem;
-        color: vars.$color-primary-900;
+        font-family: vars.$font-title;
+        font-size: 3rem;
+        color: #4b5563;
         margin: 0;
         line-height: 1.2;
 
@@ -153,11 +154,11 @@
     }
 
     &__date {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 0.95rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: vars.$color-text-600;
+        color: #1f2937;
         margin-top: 0.4rem;
 
         @include mix.respondToMin('md') {

@@ -19,6 +19,11 @@ export const HeroSection: React.FC = () => {
     const eventTitle = heroConfig?.names || heroConfig?.title || ''
     const eventSubtitle = heroConfig?.subtitle || ''
     const eventDate = heroConfig?.date || ''
+    const targetDateStr = sections.countdown?.targetDate || '2026-12-12T19:00:00'
+    const targetDateObj = new Date(targetDateStr)
+    const dateDay = !isNaN(targetDateObj.getDate()) ? String(targetDateObj.getDate()).padStart(2, '0') : '12'
+    const dateMonth = !isNaN(targetDateObj.getMonth()) ? String(targetDateObj.getMonth() + 1).padStart(2, '0') : '12'
+    const dateYear = !isNaN(targetDateObj.getFullYear()) ? String(targetDateObj.getFullYear()).slice(-2) : '26'
 
     const isFifteen = eventSubtitle.toLowerCase().includes('xv') || eventSubtitle.toLowerCase().includes('15') || eventSubtitle.toLowerCase().includes('quince')
 
@@ -106,10 +111,10 @@ export const HeroSection: React.FC = () => {
                                 animate={{ scale: 1, opacity: 1, rotate: -15 }}
                                 transition={{ duration: 1.2, delay: 1.05, ease: FLUID_EASE }}
                             />
-                            18
+                            {dateDay}
                         </span>
-                        <span className="hero-section__date-month"> . 12 .</span>
-                        <span className="hero-section__date-year">26</span>
+                        <span className="hero-section__date-month"> . {dateMonth} .</span>
+                        <span className="hero-section__date-year">{dateYear}</span>
                     </motion.div>
                 )}
 

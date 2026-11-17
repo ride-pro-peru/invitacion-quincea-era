@@ -4,10 +4,10 @@ import { SectionHeader } from '@/common/components/section-header/SectionHeader'
 import { HeartIcon } from '@phosphor-icons/react'
 import { useItinerary } from './hooks/useItinerary'
 
-import illustration from '@/assets/images/icons/flores-itinerario.svg'
-import illustrationBottom from '@/assets/images/icons/flores-itinerario-2.svg'
-import florEsquinaDer from '@/assets/images/icons/flor-esquina-superior-derecha.svg'
-import florEsquinaIzq from '@/assets/images/icons/flor-esquina-inferior-izquierda.svg'
+import illustration from '@/assets/images/icons/flores-inferiores.png'
+import illustrationBottom from '@/assets/images/icons/flores-inferiores.png'
+import florEsquinaDer from '@/assets/images/icons/flor-esquina-top-right.png'
+import florEsquinaIzq from '@/assets/images/icons/flor-esquina-bottom-left.png'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as const
 

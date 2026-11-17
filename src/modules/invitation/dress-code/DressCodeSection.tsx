@@ -4,7 +4,7 @@ import { useInvitationConfig } from '@/common/hooks'
 import { SectionHeader } from '@/common/components/section-header/SectionHeader'
 
 import dressCode from '@/assets/images/icons/dress-code.svg'
-import florCentral from '@/assets/images/icons/flor-central.svg'
+import florCentral from '@/assets/images/icons/flor-central.png'
 import photo from '@/assets/images/photos/2.jpeg'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as const

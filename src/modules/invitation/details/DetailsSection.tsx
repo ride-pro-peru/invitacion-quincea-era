@@ -5,8 +5,8 @@ import { Carousel } from '@/common/components/carousel/Carousel'
 import { useInvitationConfig } from '@/common/hooks'
 import { SectionHeader } from '@/common/components/section-header/SectionHeader'
 
-import illustrationTop from '@/assets/images/icons/flores-superiores-notas.svg'
-import florCentral from '@/assets/images/icons/flor-central.svg'
+import illustrationTop from '@/assets/images/icons/flores-inferiores.png'
+import florCentral from '@/assets/images/icons/flor-central.png'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as const
 

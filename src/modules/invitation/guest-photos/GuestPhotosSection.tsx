@@ -6,7 +6,7 @@ import { Button } from '@/common/components/button/Button'
 import { ArrowSquareOutIcon } from '@phosphor-icons/react'
 
 import icon from '@/assets/images/icons/icon-camara.svg'
-import illustrationBottom from '@/assets/images/icons/flores-album.svg'
+import illustrationBottom from '@/assets/images/icons/flores-inferiores.png'
 import photo from '@/assets/images/photos/7.jpg'
 
 export const GuestPhotosSection: React.FC = () => {

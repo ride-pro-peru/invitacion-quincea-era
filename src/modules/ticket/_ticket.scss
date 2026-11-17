@@ -23,22 +23,24 @@
     }
 
     &__container {
-        background-color: #faf7f2;
-        box-shadow: 0 5px 15px rgba(vars.$color-primary-900, 0.35);
+        background-color: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         padding: 0.8rem;
         height: auto;
         width: 100%;
         max-width: 36rem;
         box-sizing: border-box;
-        border: 1px solid rgba(vars.$color-4, 0.3);
+        border: 1px solid #e5e7eb;
         position: relative;
         z-index: 2;
-        border-radius: 4px;
+        border-radius: 24px;
+        overflow: hidden;
         margin: 2rem 0;
     }
 
     &__content {
-        border: 1px solid vars.$color-secondary-200;
+        border: 1px solid #f3f4f6;
+        border-radius: 20px;
         height: auto;
         padding: 2.2rem 1.5rem 1.8rem;
         box-sizing: border-box;
@@ -66,23 +68,22 @@
     }
 
     &__event-subtitle {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 0.85rem;
         font-weight: 600;
         letter-spacing: 0.28em;
         text-transform: uppercase;
-        color: vars.$color-primary-400;
+        color: #6b7280;
     }
 
     &__couple-names {
-        font-family: vars.$font-serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: vars.$color-primary-900;
+        font-family: vars.$font-title;
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: #4b5563;
         margin: 0.3rem 0 0;
         line-height: 1.2;
         letter-spacing: 0.02em;
-        text-transform: uppercase;
     }
 
     &__event-details {
@@ -91,9 +92,10 @@
         gap: 1.2rem;
         width: 100%;
         text-align: left;
-        background: rgba(vars.$color-primary-900, 0.03);
+        background: #f9fafb;
         padding: 1.2rem 1.4rem;
-        border: 1px dashed rgba(vars.$color-primary-400, 0.3);
+        border: 1px dashed #d1d5db;
+        border-radius: 16px;
         box-sizing: border-box;
     }
 
@@ -116,27 +118,27 @@
     }
 
     &__detail-label {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.14em;
-        color: vars.$color-secondary-500;
+        color: #6b7280;
         text-transform: uppercase;
     }
 
     &__detail-value {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 0.95rem;
         font-weight: 700;
-        color: vars.$color-primary-900;
+        color: #262626;
         line-height: 1.35;
         text-transform: uppercase;
     }
 
     &__detail-subvalue {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 0.82rem;
-        color: rgba(vars.$color-primary-900, 0.65);
+        color: #4b5563;
         line-height: 1.35;
         text-transform: uppercase;
         margin-top: 0.1rem;
@@ -154,7 +156,7 @@
     &__dashed-line {
         width: 100%;
         height: 0;
-        border-top: 1.5px dashed vars.$color-secondary-200;
+        border-top: 1.5px dashed #e5e7eb;
         z-index: 1;
     }
 
@@ -182,7 +184,8 @@
 
     &__qr-box {
         background-color: #ffffff;
-        border: 1px solid rgba(vars.$color-primary-900, 0.15);
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
         padding: 0.8rem;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
         display: flex;
@@ -198,9 +201,9 @@
     }
 
     &__qr-caption {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 0.72rem;
-        color: rgba(vars.$color-primary-900, 0.5);
+        color: #6b7280;
         font-weight: 600;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -216,22 +219,21 @@
     }
 
     &__guest-label {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 0.78rem;
-        color: vars.$color-secondary-500;
+        color: #6b7280;
         letter-spacing: 0.16em;
         text-transform: uppercase;
         font-weight: 700;
     }
 
     &__guest-name {
-        font-family: vars.$font-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: vars.$color-primary-900;
+        font-family: vars.$font-title;
+        font-size: 2.2rem;
+        font-weight: 400;
+        color: #4b5563;
         margin: 0;
         letter-spacing: 0.02em;
-        text-transform: uppercase;
     }
 
     &__passes-info {
@@ -245,7 +247,8 @@
     &__pass-card {
         flex: 1;
         background: #ffffff;
-        border: 1px solid rgba(vars.$color-primary-900, 0.12);
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
         padding: 0.9rem 0.5rem;
         display: flex;
         flex-direction: column;
@@ -255,24 +258,24 @@
         transition: transform 0.2s ease, border-color 0.2s ease;
 
         &:hover {
-            border-color: vars.$color-4;
+            border-color: #9ca3af;
             transform: translateY(-2px);
         }
     }
 
     &__pass-count {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 2.2rem;
         font-weight: 700;
-        color: vars.$color-primary-900;
+        color: #262626;
     }
 
     &__pass-label {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 1.2rem;
         font-weight: 700;
         letter-spacing: 0.1em;
-        color: vars.$color-secondary-500;
+        color: #6b7280;
         text-transform: uppercase;
     }
 
@@ -287,7 +290,8 @@
     &__table-card {
         width: 100%;
         background: #ffffff;
-        border: 1px solid rgba(vars.$color-4, 0.35);
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
         padding: 1.1rem 1.4rem;
         display: flex;
         flex-direction: column;
@@ -299,19 +303,19 @@
     }
 
     &__table-label {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 1.2rem;
         font-weight: 700;
         letter-spacing: 0.18em;
-        color: vars.$color-secondary-500;
+        color: #6b7280;
         text-transform: uppercase;
     }
 
     &__table-value {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.6rem;
         font-weight: 700;
-        color: vars.$color-primary-900;
+        color: #262626;
         text-transform: uppercase;
         letter-spacing: 0.04em;
     }
@@ -341,21 +345,22 @@
         justify-content: center;
         gap: 0.8rem;
         padding: 0.9rem 1.2rem;
-        background: rgba(vars.$color-4, 0.08);
-        border: 1px dashed rgba(vars.$color-4, 0.4);
+        background: #f9fafb;
+        border: 1px dashed #d1d5db;
+        border-radius: 14px;
         text-align: center;
         box-sizing: border-box;
 
         &-icon {
-            color: vars.$color-primary-400;
+            color: #6b7280;
             flex-shrink: 0;
         }
 
         &-text {
-            font-family: vars.$font-sans;
+            font-family: vars.$font-secondary;
             font-size: 0.82rem;
             font-weight: 600;
-            color: vars.$color-primary-900;
+            color: #262626;
             margin: 0;
             line-height: 1.4;
             letter-spacing: 0.02em;
@@ -372,10 +377,10 @@
             width: 100%;
             padding: 0.9rem 1.8rem;
             border-radius: 100rem;
-            border: 1.5px solid vars.$color-primary-900 !important;
+            border: 1.5px solid #374151 !important;
             background-color: transparent !important;
-            color: vars.$color-primary-900 !important;
-            font-family: vars.$font-sans;
+            color: #374151 !important;
+            font-family: vars.$font-secondary;
             font-size: 0.88rem;
             font-weight: 700;
             letter-spacing: 0.12em;
@@ -384,11 +389,11 @@
             transition: all 0.25s ease;
 
             svg {
-                color: vars.$color-primary-900 !important;
+                color: #374151 !important;
             }
 
             &:hover {
-                background-color: vars.$color-primary-900 !important;
+                background-color: #374151 !important;
                 color: #ffffff !important;
 
                 svg {
@@ -408,18 +413,18 @@
     }
 
     &__footer-label {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 0.85rem;
         font-weight: 700;
         letter-spacing: 0.18em;
-        color: vars.$color-secondary-500;
+        color: #6b7280;
     }
 
     &__footer-number {
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 1.25rem;
         font-weight: 700;
-        color: #d32f2f;
+        color: #262626;
         letter-spacing: 0.12em;
     }
 }
@@ -441,24 +446,25 @@
     padding: 1.5rem;
 
     &__title {
-        font-size: 1.1rem;
-        color: vars.$color-primary-900;
+        font-size: 2.2rem;
+        color: #4b5563;
         margin: 0;
         text-align: center;
-        font-family: vars.$font-serif;
+        font-family: vars.$font-title;
     }
 
     &__card {
         width: 100%;
         max-width: 500px;
-        border-radius: 8px;
+        border-radius: 20px;
+        overflow: hidden;
     }
 
     &__guest-name {
         font-size: 1.25rem;
         font-weight: 600;
-        color: vars.$color-primary-900;
-        font-family: vars.$font-serif;
+        color: #1f2937;
+        font-family: vars.$font-secondary;
         text-align: center;
         margin-bottom: 0.4rem;
         margin-top: 0.2rem;
@@ -470,11 +476,14 @@
         text-align: center;
         padding-top: 0.6rem;
         margin-top: 0.4rem;
+        font-family: vars.$font-secondary;
+        color: #6b7280;
     }
 
     &__table-number {
         font-size: 2.2rem;
-        color: vars.$color-4;
+        color: #262626;
+        font-family: vars.$font-secondary;
         text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     }
 }

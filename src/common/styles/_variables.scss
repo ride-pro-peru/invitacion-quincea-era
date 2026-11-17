@@ -10,9 +10,11 @@
 // --------------------------------------------------------------------------
 // 1. Active Font Configuration (Selected via theme.config.json)
 // --------------------------------------------------------------------------
-$font-cursive: theme.$font-cursive !default;
-$font-serif: theme.$font-serif !default;
-$font-sans: theme.$font-sans !default;
+$font-title: font.$font-hellowin !default;
+$font-secondary: font.$font-afacad !default;
+$font-cursive: font.$font-hellowin !default;
+$font-serif: font.$font-afacad !default;
+$font-sans: font.$font-afacad !default;
 
 // Font Pack Aliases (For explicit pack selection)
 $font-p1-cursive: font.$font-p1-cursive !default;
@@ -44,7 +46,7 @@ $color-3: theme.$color-3 !default;
 $color-4: theme.$color-4 !default;
 $color-5: theme.$color-5 !default;
 
-$color-text: #2c2626 !default; // Base text color
+$color-text: #262626 !default; // Base text color (Gris oscuro para lectura)
 
 // --------------------------------------------------------------------------
 // 3. Dynamic Color Scale Generation (100 to 900 for $color-1 .. $color-5)
@@ -133,8 +135,8 @@ $color-primary-700: $color-1-700 !default;
 $color-primary-800: $color-1-800 !default;
 $color-primary-900: $color-1-900 !default;
 
-$color-secondary-100: $color-2-100 !default;
-$color-secondary-200: $color-2-200 !default;
+$color-secondary-100: #ffffff !default;
+$color-secondary-200: #f4f4f5 !default;
 $color-secondary-300: $color-2-300 !default;
 $color-secondary-400: $color-2-400 !default;
 $color-secondary-500: $color-2-500 !default;

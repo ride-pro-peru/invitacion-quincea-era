@@ -2,7 +2,7 @@
 @use '../../../common/styles/mixins' as mix;
 
 .message-section {
-    background-color: vars.$color-secondary-100;
+    background-color: #ffffff;
     padding: 5rem 0;
 
     @include mix.respondToMin('xs') {
@@ -44,8 +44,9 @@
 
     &__text {
         text-align: center;
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.2rem;
+        color: #262626;
 
         @include mix.respondToMin('sm') {
             font-size: 1.4rem;

@@ -5,7 +5,7 @@ import { useNavigation, useMusicPlayer } from '@/common/hooks'
 import envelopeOpen from '@/assets/images/icons/envelope-open.svg'
 import envelopeClosed from '@/assets/images/icons/envelope-closed.svg'
 import grethelPhoto from '@/assets/images/photos/1.jpeg'
-import envelopFlowers from '@/assets/images/icons/envelop-flowers.svg'
+import envelopFlowers from '@/assets/images/icons/envelop-flowers.png'
 
 export const EnvelopeOpenClosed: React.FC = () => {
 

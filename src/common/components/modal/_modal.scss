@@ -21,14 +21,15 @@
 
     &__card {
         background-color: #ffffff;
-        color: vars.$color-text-900;
+        color: #1f2937;
         width: 100%;
         max-width: 54rem;
         max-height: 90vh;
         max-height: 90dvh;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 24px;
         overflow: hidden;
         position: relative;
         z-index: 1001;
@@ -40,28 +41,28 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 1.4rem;
-        border-bottom: 1px solid vars.$color-primary-100;
+        padding: 1.6rem 2rem;
+        border-bottom: 1px solid #e5e7eb;
         gap: 1.6rem;
     }
 
     &__title {
-        font-family: vars.$font-serif;
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: vars.$color-primary-900;
+        font-family: vars.$font-title;
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: #4b5563;
         line-height: 1.2;
         margin: 0;
     }
 
     &__container {
-        padding: 1rem;
+        padding: 1.8rem;
         overflow-y: auto;
         flex: 1;
-        font-family: vars.$font-sans;
+        font-family: vars.$font-secondary;
         font-size: 1.5rem;
         line-height: 1.6;
-        color: vars.$color-text-700;
+        color: #262626;
 
         &::-webkit-scrollbar {
             width: 6px;

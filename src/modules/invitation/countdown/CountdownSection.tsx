@@ -7,8 +7,8 @@ import { SectionHeader } from '@/common/components/section-header/SectionHeader'
 import { Countdown } from '@/common/components/countdown/Countdown'
 import { Button } from '@/common/components/button/Button'
 
-import flor1 from '@/assets/images/icons/flor-esquina-superior-derecha.svg'
-import flor2 from '@/assets/images/icons/flor-esquina-inferior-izquierda.svg'
+import flor1 from '@/assets/images/icons/flor-esquina-top-right.png'
+import flor2 from '@/assets/images/icons/flor-esquina-bottom-left.png'
 import photo from '@/assets/images/photos/13.jpg'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as const
@@ -55,8 +55,7 @@ export const CountdownSection: React.FC = () => {
                                 transition={{ duration: 1.1, delay: 0.1, ease: FLUID_EASE }}
                             >
                                 <SectionHeader
-                                    pretitle="Cuenta Regresiva"
-                                    title="Solo Falta"
+                                    title="Cuenta Regresiva"
                                     align="center"
                                 />
                             </motion.div>
@@ -127,7 +126,7 @@ export const CountdownSection: React.FC = () => {
                                 transition={{ duration: 1.1, delay: 0.55, ease: FLUID_EASE }}
                             >
                                 <Button
-                                    variant="secondary"
+                                    variant="primary"
                                     radius="full"
                                     icon={<CalendarPlusIcon size={20} className="countdown-section__btn-icon" />}
                                     onClick={() => downloadSaveTheDate()}

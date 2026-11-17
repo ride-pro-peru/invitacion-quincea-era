@@ -32,8 +32,7 @@ export const MessageSection: React.FC = () => {
                     transition={{ duration: 1.1, delay: 0.15, ease: FLUID_EASE }}
                 >
                     <SectionHeader
-                        pretitle="Querida Familia"
-                        title=""
+                        title="Querida Familia"
                     />
                 </motion.div>
 

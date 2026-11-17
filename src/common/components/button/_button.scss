@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    font-family: vars.$font-serif;
+    font-family: vars.$font-secondary;
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1;
@@ -30,53 +30,50 @@
         transform: scale(0.97);
     }
 
-    &--primary {
-        background-color: vars.$color-primary;
-        color: #ffffff;
-
-        &:hover:not(:disabled) {
-            background-color: vars.$color-primary-600;
-            box-shadow: 0 4px 14px rgba(vars.$color-primary-900, 0.25);
-        }
-    }
-
+    &--primary,
     &--secondary {
-        background-color: vars.$color-secondary-400;
-        color: vars.$color-text-800;
+        background-color: var(--primary);
+        color: var(--primary-foreground);
 
         &:hover:not(:disabled) {
-            background-color: vars.$color-secondary-600;
-            box-shadow: 0 4px 14px rgba(vars.$color-secondary-900, 0.2);
+            opacity: 0.92;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+        }
+
+        .countdown-section__btn-icon,
+        .btn__icon svg,
+        svg {
+            color: var(--primary-foreground);
         }
     }
 
     &--tertiary {
-        background-color: vars.$color-tertiary;
-        color: #ffffff;
+        background-color: var(--accent);
+        color: var(--accent-foreground);
 
         &:hover:not(:disabled) {
-            background-color: vars.$color-tertiary-600;
-            box-shadow: 0 4px 14px rgba(vars.$color-tertiary-900, 0.2);
+            opacity: 0.92;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
         }
     }
 
     &--outline {
-        background-color: transparent;
-        border-color: vars.$color-secondary-500;
-        color: vars.$color-primary;
+        background-color: var(--background);
+        border-color: var(--border);
+        color: var(--foreground);
 
         &:hover:not(:disabled) {
-            background-color: vars.$color-primary;
-            color: #ffffff;
+            background-color: var(--muted);
+            color: var(--foreground);
         }
     }
 
     &--ghost {
         background-color: transparent;
-        color: vars.$color-primary;
+        color: var(--foreground);
 
         &:hover:not(:disabled) {
-            background-color: vars.$color-primary-100;
+            background-color: var(--muted);
         }
     }
 
@@ -87,19 +84,19 @@
         min-height: 4rem;
         aspect-ratio: 1 / 1;
         background-color: transparent;
-        color: vars.$color-primary;
+        color: var(--foreground);
 
         &:hover:not(:disabled) {
-            background-color: vars.$color-primary-100;
+            background-color: var(--muted);
             transform: scale(1.05);
         }
 
         &.btn--primary {
-            background-color: vars.$color-primary;
-            color: #ffffff;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
 
             &:hover:not(:disabled) {
-                background-color: vars.$color-primary-600;
+                opacity: 0.92;
             }
         }
     }

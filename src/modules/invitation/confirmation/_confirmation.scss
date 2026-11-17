@@ -14,6 +14,10 @@
     margin-bottom: -0.1rem;
     margin-top: -1.5rem;
 
+    path {
+        fill: #ffffff;
+    }
+
     @include mix.respondToMin('md') {
         margin-top: -2rem;
     }
@@ -28,7 +32,7 @@
 }
 
 .confirmation-section {
-    background-color: vars.$color-secondary-100;
+    background-color: #ffffff;
     padding: 0 0 6rem;
 
     @include mix.respondToMin('sm') {
@@ -60,12 +64,12 @@
     &__card {
         width: 100%;
         background-color: #ffffff;
-        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         position: relative;
         overflow: hidden;
         padding: 8rem 1.8rem;
-        border: 0.1rem solid rgba(vars.$color-primary-800, 0.08);
-        border-radius: 0.4rem;
+        border: 1px solid #f3f4f6;
+        border-radius: 24px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -180,10 +184,10 @@
     }
 
     &__label {
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.1rem;
         letter-spacing: 0.05em;
-        color: vars.$color-primary-900;
+        color: #6b7280;
         text-transform: uppercase;
         display: flex;
         align-items: center;
@@ -196,7 +200,7 @@
     }
 
     &__required {
-        color: vars.$color-primary-700;
+        color: #9ca3af;
     }
 
     &__attending-grid {
@@ -217,14 +221,15 @@
         gap: 1rem;
         padding: 1.2rem 1.6rem;
         background-color: #ffffff;
-        border: 0.15rem solid rgba(vars.$color-primary-800, 0.15);
+        border: 0.15rem solid #e5e7eb;
+        border-radius: 14px;
         cursor: pointer;
         transition: all 0.25s ease;
         text-align: center;
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.2rem;
         font-weight: 600;
-        color: vars.$color-primary-900;
+        color: #1f2937;
 
         @include mix.respondToMin('md') {
             padding: 1.6rem 2.2rem;
@@ -238,24 +243,24 @@
         }
 
         &:hover {
-            border-color: vars.$color-secondary-600;
-            background-color: vars.$color-secondary-100;
+            border-color: #9ca3af;
+            background-color: #f9fafb;
         }
 
         &--active {
-            background-color: vars.$color-secondary-100;
-            border-color: vars.$color-secondary-600;
-            box-shadow: 0 4px 14px rgba(vars.$color-secondary-600, 0.15);
-            color: vars.$color-primary-900;
+            background-color: #f3f4f6;
+            border-color: #4b5563;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+            color: #111827;
             font-weight: 700;
         }
 
         &--no {
             &.confirmation-form__attending-btn--active {
-                border-color: #d9534f;
-                background-color: rgba(217, 83, 79, 0.05);
-                color: #d9534f;
-                box-shadow: 0 4px 14px rgba(217, 83, 79, 0.15);
+                border-color: #6b7280;
+                background-color: #f3f4f6;
+                color: #374151;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
             }
         }
     }
@@ -269,7 +274,7 @@
     &__input-icon {
         position: absolute;
         left: 1.4rem;
-        color: vars.$color-secondary-600;
+        color: #6b7280;
         pointer-events: none;
 
         @include mix.respondToMin('md') {
@@ -285,11 +290,12 @@
     &__input {
         width: 100%;
         padding: 1.2rem 1.4rem 1.2rem 4.2rem;
-        font-family: vars.$font-serif;
+        font-family: vars.$font-secondary;
         font-size: 1.2rem;
-        color: vars.$color-primary-900;
+        color: #1f2937;
         background-color: #ffffff;
-        border: 0.15rem solid rgba(vars.$color-primary-800, 0.15);
+        border: 0.15rem solid #e5e7eb;
+        border-radius: 14px;
         outline: none;
         transition: all 0.25s ease;
 
@@ -299,8 +305,8 @@
         }
 
         &::placeholder {
-            font-family: vars.$font-serif;
-            color: #888888;
+            font-family: vars.$font-secondary;
+            color: #9ca3af;
             font-size: 1.1rem;
 
             @include mix.respondToMin('md') {
@@ -309,16 +315,16 @@
         }
 
         &:focus {
-            border-color: vars.$color-secondary-600;
+            border-color: #6b7280;
             background-color: #ffffff;
-            box-shadow: 0 0 0 0.3rem rgba(vars.$color-secondary-600, 0.15);
+            box-shadow: 0 0 0 0.3rem rgba(107, 114, 128, 0.15);
         }
 
         &--error {
-            border-color: #d9534f;
+            border-color: #9ca3af;
 
             &:focus {
-                box-shadow: 0 0 0 0.3rem rgba(217, 83, 79, 0.15);
+                box-shadow: 0 0 0 0.3rem rgba(156, 163, 175, 0.2);
             }
         }
     }
@@ -506,18 +512,18 @@
         }
 
         &-title {
-            font-family: vars.$font-serif;
-            font-size: 2.2rem;
-            color: vars.$color-primary-900;
+            font-family: vars.$font-title;
+            font-size: 3rem;
+            color: #4b5563;
             margin-bottom: 1rem;
-            font-weight: 600;
+            font-weight: 400;
         }
 
         &-desc {
-            font-family: vars.$font-serif;
+            font-family: vars.$font-secondary;
             font-size: 1.15rem;
             line-height: 1.6;
-            color: #555555;
+            color: #262626;
             max-width: 40rem;
             margin-bottom: 2rem;
         }

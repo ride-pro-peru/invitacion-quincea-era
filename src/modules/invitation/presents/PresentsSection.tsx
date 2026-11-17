@@ -7,9 +7,9 @@ import { Button } from '@/common/components/button/Button'
 import { Accordion } from '@/common/components/accordion/Accordion'
 import type { AccordionItem } from '@/common/types'
 
-import florPresents from '@/assets/images/icons/flor-presents.svg'
-import florCentral from '@/assets/images/icons/flor-central.svg'
-import illustrationBottom from '@/assets/images/icons/flores-presents-inferior.svg'
+import florPresents from '@/assets/images/icons/flor-central.png'
+import florCentral from '@/assets/images/icons/flor-central.png'
+import illustrationBottom from '@/assets/images/icons/flores-inferiores.png'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 

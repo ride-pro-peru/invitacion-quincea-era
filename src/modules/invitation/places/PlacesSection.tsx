@@ -10,7 +10,7 @@ import photo from '@/assets/images/photos/8.jpg'
 import cabania from '@/assets/images/icons/cabania.svg'
 import temploIcon from '@/assets/images/icons/templo.svg'
 import copasIcon from '@/assets/images/icons/copas.svg'
-import flor from '@/assets/images/icons/flor-2.svg'
+import flor from '@/assets/images/icons/flor-central.png'
 
 const FLUID_EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
