@@ -41,21 +41,27 @@ export const MenuSidebar: React.FC<MenuSidebarProps> = ({
 }) => {
     const { goTo } = useNavigation()
     const { isMenuOpen, onCloseMenu, activeTitle } = useMenu()
-    const { config } = useInvitationConfig()
+    const { config, sections } = useInvitationConfig()
     const { ticket, onRemoveTicket } = useTicket()
     const hasTicketingSystem = Boolean(config.hasTicketingSystem)
     const canAccessTicket = Boolean(hasTicketingSystem && ticket)
     const showFooter = canAccessTicket || !hasTicketingSystem
 
     const importantSections = React.useMemo(() => {
-        if (items && items.length > 0 && items.length <= 5) {
-            return items.map((item) => ({
+        const base = items && items.length > 0 && items.length <= 5
+            ? items.map((item) => ({
                 ...item,
                 icon: item.icon || DEFAULT_SECTIONS.find(d => (item.href || '').includes(d.href.replace('#', '')))?.icon || <HouseIcon size={20} />
             }))
-        }
-        return DEFAULT_SECTIONS
-    }, [items])
+            : DEFAULT_SECTIONS
+
+        return base.filter(item => {
+            if (item.href === '#presents' && sections?.presents?.showPresents === false) {
+                return false
+            }
+            return true
+        })
+    }, [items, sections?.presents?.showPresents])
 
     const handleNavigate = (path: string) => {
         onCloseMenu();

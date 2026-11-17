@@ -127,7 +127,7 @@
       "hashtag": "#CieloXV"
     },
     "presents": {
-      "showPresents": true,
+      "showPresents": false,
       "title": "Mesa de Regalos",
       "url": "",
       "bankDetails": {
