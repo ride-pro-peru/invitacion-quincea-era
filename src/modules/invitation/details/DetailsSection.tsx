@@ -21,19 +21,19 @@ export const DetailsSection: React.FC = () => {
     const cards = [
         ...(detailsConfig?.noKids !== false ? [{
             id: 'no-kids',
-            category: 'SOBRE EL EVENTO',
+            category: 'Sobre el evento',
             title: 'No Niños',
             description: detailsConfig?.noKidsMessage || 'Aunque amamos a los pequeños, esta recepción ha sido planeada exclusivamente para adultos. Agradecemos tu comprensión.',
         }] : []),
         ...(detailsConfig?.punctuality !== false ? [{
             id: 'punctuality',
-            category: 'LOGÍSTICA',
+            category: 'Logística',
             title: 'Aviso de Puntualidad',
             description: detailsConfig?.punctualityMessage || 'Te sugerimos llegar con 15 minutos de anticipación para acomodarte tranquilamente y no perderte ningún momento especial.',
         }] : []),
         {
             id: 'hashtag',
-            category: 'REDES SOCIALES',
+            category: 'Redes sociales',
             title: 'Hashtag Oficial',
             description: 'Te invitamos a compartir tus fotografías y recuerdos del evento usando nuestro hashtag en tus publicaciones:',
             highlight: detailsConfig?.hashtag || '#GrethelStefaniaXV',

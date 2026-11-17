@@ -33,7 +33,7 @@ export const PlacesSection: React.FC = () => {
         return null
     }
 
-    const eventDate = heroConfig?.date || '18 DE DICIEMBRE DE 2026'
+    const eventDate = heroConfig?.date || '12 de Diciembre de 2026'
 
     return (
         <>

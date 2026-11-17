@@ -29,7 +29,7 @@
       "showHero": true,
       "names": "Cielo Alvarado Diaz",
       "subtitle": "Mis XV Años",
-      "date": "12 DE DICIEMBRE DE 2026",
+      "date": "12 de Diciembre de 2026",
       "city": "Chimbote, Perú"
     },
     "message": {
@@ -59,7 +59,7 @@
           "title": "Recepción & Fiesta",
           "venue": "Salón de Eventos Imperio",
           "location": "Jr. Francisco Bolognesi 343, Chimbote",
-          "time": "19:00 HRS",
+          "time": "19:00 hrs",
           "date": "12-12-2026",
           "url": "https://maps.app.goo.gl/Hj2pjzeTY3kRsZPi8"
         }
@@ -69,31 +69,31 @@
       "showItinerary": true,
       "itinerary": [
         {
-          "time": "19:00 HRS",
+          "time": "19:00 hrs",
           "event": "Recepción de Invitados"
         },
         {
-          "time": "20:00 HRS",
+          "time": "20:00 hrs",
           "event": "Entrada de la Quinceañera"
         },
         {
-          "time": "20:30 HRS",
+          "time": "20:30 hrs",
           "event": "Vals & Brindis de Honor"
         },
         {
-          "time": "21:15 HRS",
+          "time": "21:15 hrs",
           "event": "Cena de Gala"
         },
         {
-          "time": "22:00 HRS",
+          "time": "22:00 hrs",
           "event": "Apertura de Pista & Fiesta"
         },
         {
-          "time": "00:00 HRS",
+          "time": "00:00 hrs",
           "event": "Hora Loca"
         },
         {
-          "time": "02:00 HRS",
+          "time": "02:00 hrs",
           "event": "Fin del evento"
         }
       ]

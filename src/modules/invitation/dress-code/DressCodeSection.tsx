@@ -59,7 +59,7 @@ export const DressCodeSection: React.FC = () => {
                         transition={{ duration: 0.8, ease: FLUID_EASE }}
                     >
                         <SectionHeader
-                            pretitle="CÓDIGO DE VESTIMENTA"
+                            pretitle="Código de vestimenta"
                             title={title}
                             align="center"
                         />

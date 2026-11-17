@@ -54,7 +54,7 @@ export const SearchForm: React.FC = () => {
                     aria-label="Buscar invitación"
                     isLoading={isLoading}
                 >
-                    BUSCAR INVITACIÓN
+                    Buscar Invitación
                 </Button>
             </div>
         </form>

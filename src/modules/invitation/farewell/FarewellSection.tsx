@@ -11,7 +11,7 @@ export const FarewellSection: React.FC = () => {
     const { sections } = useInvitationConfig()
 
     const eventTitle = sections.hero?.names || sections.hero?.title || 'Grethel Stefania'
-    const eventDate = sections.hero?.date || '18 DE DICIEMBRE DE 2026'
+    const eventDate = sections.hero?.date || '12 de Diciembre de 2026'
 
     return (
         <section id="farewell" className="farewell">

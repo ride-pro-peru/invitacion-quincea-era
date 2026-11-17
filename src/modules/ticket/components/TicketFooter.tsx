@@ -8,7 +8,7 @@ interface Props {
 export const TicketFooter: React.FC<Props> = ({ ticket }) => {
     return (
         <footer className="ticket__footer">
-            <span className="ticket__footer-label">FOLIO:</span>
+            <span className="ticket__footer-label">Folio:</span>
             <strong className="ticket__footer-number">{ticket.keyPass}</strong>
         </footer>
     )

@@ -13,6 +13,15 @@
     --xv-tap: 52px;
 }
 
+/* ==========================================================================
+   Quitar todas las mayúsculas (text-transform: none) en toda la página
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    text-transform: none !important;
+}
+
 body {
     color: var(--xv-ink);
 }
@@ -24,13 +33,15 @@ body {
     &__pretitle {
         font-size: 1.35rem;
         font-weight: 600;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        text-transform: none;
         color: var(--xv-muted);
         margin-bottom: 0.8rem;
 
         &--uppercase {
             font-size: 1.35rem;
+            letter-spacing: 0.05em;
+            text-transform: none;
         }
     }
 
@@ -108,8 +119,8 @@ body {
 
 .countdown__concept {
     font-size: max(1.3rem, 13px);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-transform: none;
 }
 
 .countdown-section__calendar-title {

@@ -9,7 +9,7 @@ export const Search: React.FC = () => {
     const { sections } = useInvitationConfig()
 
     const eventTitle = sections.hero?.names || 'Invitación Especial'
-    const eventDate = sections.hero?.date || '20 DE NOVIEMBRE DE 2026'
+    const eventDate = sections.hero?.date || '12 de Diciembre de 2026'
 
     const handleOpenInfoModal = () => {
         onOpenModal(MODAL_NAMES.searchInfo, 'Información de Acceso')
